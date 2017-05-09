@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Bibliography:</strong>
+  <%= @post.bibliography %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @post.genre %>
+</p>
+
+<p>
+  <strong>Excerpt:</strong>
+  <%= @post.excerpt %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @post.price %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @post.date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post.user && @post.user.email %>
+</p>
+
+
+<%if @post.user.id == current_user.id%>
+        <%= link_to "Cancel", posts_path %>
+
+        <%= link_to "Edit Post", edit_post_path(@post)%>
+    <%else%>
+        <% link_to "Cancel", posts_path%>
+        <%end%>

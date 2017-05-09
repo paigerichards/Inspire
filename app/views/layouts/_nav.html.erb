@@ -1,0 +1,19 @@
+<div class="search">
+  <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Feed" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+
+
+  <% if @posts.blank? %>
+    <h4>There are no recipes containing the term <%= params[:search] %>.</h4>
+  <% end %>
+</div>
+
+
+
+<nav class="sidebar">
+<%= link_to 'Home', posts_path %>
+<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Profile', profiles_path %>
+</nav>

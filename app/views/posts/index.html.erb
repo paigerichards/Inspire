@@ -1,0 +1,36 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>Feed</h1>
+<%= render 'layouts/nav', post: @post %>
+
+
+
+<section>
+  <div>
+    <% @posts.each do |post| %>
+
+      <!-- Profile picture -->
+      <% if post.user.present? %>
+        <strong><%= post.user.email %></strong>
+        <strong><%= post.user.username %></strong>
+      <% else %>
+        <i>No email</i>
+      <% end %>
+  </div>
+
+  <div>
+        <h2><%= post.title %></h2>
+        <h3>Bibliography</h3>
+        <p><%= post.bibliography%></p>
+  </div>
+
+  <div class="links">
+    <p><%= link_to 'Show', post %> |
+    <%= link_to 'Edit', edit_post_path(post) %> |
+    <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </div>
+
+</section>
+
+    <% end %>

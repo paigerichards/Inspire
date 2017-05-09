@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<!-- <h1>Profiles</h1> -->
+
+<body>
+
+
+
+    <% @profiles.each do |profile| %>
+<!-- Only to show user profile -->
+
+      <div class="top-links">
+        <%= link_to 'Edit', edit_profile_path(profile) %></td>
+        <!-- link to settings, put destroy within and sign out -->
+        <%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+
+      <div class="profile-info">
+        <span><%= profile.image %></span>
+        <span><%= profile.first_name %></span>
+        <span><%= profile.last_name %></span>
+        <span><%= profile.location %></span>
+      </div>
+
+
+
+    <% end %>
+
+
+</body>
+
+
+<!-- <%= link_to 'New Profile', new_profile_path %> -->
