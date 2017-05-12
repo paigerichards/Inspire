@@ -21,8 +21,8 @@
 *Below I have incorporated some of my inspiration for my app. I explored the fundamentals of the API applications and user interfaces of both Instagram and Facebook and somewhat of LinkedIn.*
 
 -  ![](images/facebook.jpg)
--  ![](images/instagram.jpg)
 -  ![](images/linkedin.jpg)
+-  ![](images/instagram.jpg)
 
 Instagram has many great features, the app enables the user to search by; location, tags, usernames/actual names, follow users, contact them and tag them in posts, either one the user has made or in a comment. What appeals me to Instagram is its easy user experience, its simplistic and not complicated, quite straightforward.  Facebook is VERY much simpler. Facebook allows the users to become friends which is much like the follow method on Instagram and connect option n LinkedIn. One thing that really stuck out about Facebook was its ability to have changeable newsfeeds; defaulted and customizable ones by the user.
 
@@ -66,7 +66,7 @@ Sign Up process
 
 
   ![](images/iphone-6/iphone-6Sign UP.jpg)
->I want the user to click the sign up button and then be brough to this page where they will fill out their personal details 
+>I want the user to click the sign up button and then be brough to this page where they will fill out their personal details
 
 
 
