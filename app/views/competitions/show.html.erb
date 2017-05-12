@@ -1,39 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @competition.title %>
-</p>
 
-<p>
-  <strong>Company:</strong>
-  <%= @competition.company %>
-</p>
+<div class="competition-show"
+  <h2><%= @competition.title %></h2>
+  <em>
+    <% if @competition.company.empty? %>
+      <%= competition.user %>
+    <% else %>
+      <%= @competition.company %>
+    <%end%>
+  </em>
 
-<p>
-  <strong>Description:</strong>
-  <%= @competition.description %>
-</p>
+  <h3>Description:</h3>
+  <p><%= @competition.description %></p>
 
-<p>
-  <strong>Date drawn:</strong>
-  <%= @competition.date_drawn %>
-</p>
+  <p>Date drawn:</p>
+  <em style="font-weight:bold;"><%= @competition.date_drawn %></em>
 
-<p>
-  <strong>User:</strong>
-  <%= @competition.user && @competition.user.email %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @competition.date %>
-</p>
-
-<%if @post.user.id == current_user.id%>
-        <%= link_to "Cancel", posts_path %>
-
-        <%= link_to "Edit Post", edit_post_path(@post)%>
+<%if @competition.user.id == current_user.id%>
+        <%= link_to "Cancel", competitions_path %>
+        <%= link_to "Edit Post", edit_competition_path(@post)%>
     <%else%>
-        <% link_to "Cancel", posts_path%>
-        <%end%>
+        <% link_to "Cancel", competitions_path%>
+    <%end%>
+  </div>

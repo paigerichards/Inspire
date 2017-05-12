@@ -1,47 +1,36 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %>
 
+  <%= render 'layouts/nav', post: @post %>
 
+<section class="post-show-wrap">
+<div class="show-person">
+ <!-- Profile picture -->
+<% if @post.user.present? %>
+  <strong><%= @post.user.username %></strong>
+<% else %>
+  <strong><%= @post.user.email %></strong>
+<% end %>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="post-show">
+    <h2><%= @post.title %></h2>
+    <em><%= @post.genre %></em>
+    <h3>Bibliography:</h3>
+      <p><%= @post.bibliography%></p>
+    <h3>Excerpt:</h3>
+      <p><%= @post.excerpt %></p>
 
-<p>
-  <strong>Bibliography:</strong>
-  <%= @post.bibliography %>
-</p>
+  <div class="price">
+    <p>Price:</p>
+    <strong><%= @post.price %></strong>
+  </div>
+</div>
 
-<p>
-  <strong>Genre:</strong>
-  <%= @post.genre %>
-</p>
-
-<p>
-  <strong>Excerpt:</strong>
-  <%= @post.excerpt %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @post.price %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @post.date %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @post.user && @post.user.email %>
-</p>
-
-
-<%if @post.user.id == current_user.id%>
-        <%= link_to "Cancel", posts_path %>
-
-        <%= link_to "Edit Post", edit_post_path(@post)%>
+  <%if @post.user == current_user%>
+      <%= link_to 'Edit', edit_post_path(@post) %>
+      <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
     <%else%>
-        <% link_to "Cancel", posts_path%>
-        <%end%>
+      <% link_to 'Back', posts_path%>
+  <%end%>
+ </div>
+</section>

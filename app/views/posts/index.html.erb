@@ -4,6 +4,7 @@
 <h1>Feed</h1>
 <%= render 'layouts/nav', post: @post %>
 
+
 <div class="search">
   <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Feed" %>
@@ -12,7 +13,7 @@
 
 
   <% if @posts.blank? %>
-    <h4>There are no recipes containing the term <%= params[:search] %>.</h4>
+    <h4>No Search Results <%= params[:search] %>.</h4>
   <% end %>
 </div>
 
@@ -24,27 +25,28 @@
       <div class="person">
       <!-- Profile picture -->
       <% if post.user.present? %>
-        <strong><%= post.user.email %></strong>
         <strong><%= post.user.username %></strong>
       <% else %>
-        <i>No email</i>
+        <strong><%= post.user.email %></strong>
       <% end %>
 </div>
-
-
-  <div>
-        <h2><%= post.title %></h2>
+  <div class="header">
+        <h2><%=post.title%></h2>
+        <em><%=post.genre%></em>
         <h3>Bibliography</h3>
-        <p><%= post.bibliography%></p>
+        <p><%=truncate(post.bibliography, :length => 50)%></p>
+
         <div class="links">
-          <p><%= link_to 'Show', post %> |
-          <%= link_to 'Edit', edit_post_path(post) %> |
-          <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <% if user_signed_in? %>
+            <%if post.user_id == current_user%>
+              <%= link_to 'Show', post %>
+              <%= link_to 'Edit', edit_post_path(job) %>
+              <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%else%>
+              <%= link_to 'Show', post %>
+            <% end %>
+          <% end %>
         </div>
-  </div>
-
-
-
-</section>
-
-    <% end %>
+    </div>
+  </section>
+<% end %>

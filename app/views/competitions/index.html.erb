@@ -2,36 +2,41 @@
 
 <h1>Competitions</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Company</th>
-      <th>Description</th>
-      <th>Date drawn</th>
-      <th>User</th>
-      <th>Date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= render 'layouts/nav', competition: @competition %>
 
-  <tbody>
+<div class="search">
+  <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Competitions" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+
+
+  <% if @competitions.blank? %>
+    <h4>No Search Results <%= params[:search] %>.</h4>
+  <% end %>
+</div>
+
     <% @competitions.each do |competition| %>
-      <tr>
-        <td><%= competition.title %></td>
-        <td><%= competition.company %></td>
-        <td><%= competition.description %></td>
-        <td><%= competition.date_drawn %></td>
-        <td><%= competition.user %></td>
-        <td><%= competition.date %></td>
-        <td><%= link_to 'Show', competition %></td>
-        <td><%= link_to 'Edit', edit_competition_path(competition) %></td>
-        <td><%= link_to 'Destroy', competition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <h2><%= competition.title %></h2>
+        <em style="font-weight:bold;">
+            <% if competition.company.empty? %>
+            <%= competition.user %>
+          <% else %>
+            <%= competition.company %>
+          <%end%>
+        </em>
+        <h3>Description</h3>
+        <p><%= truncate(competition.description, :length => 50) %></p>
+        <em><%= competition.date_drawn %></em>
 
-<br>
+        <div class="links">
+          <%if @competition.user.id == current_user.id%>
+            <%= link_to 'Show', competition %>
+            <%= link_to 'Edit', edit_competition_path(competition) %>
+            <%= link_to 'Destroy', competition, method: :delete, data: { confirm: 'Are you sure?' } %>
+         <%else%>
+          <%= link_to 'Show', competition %>
+    <% end %>
+  <% end %>
 
 <%= link_to 'New Competition', new_competition_path %>

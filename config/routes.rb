@@ -1,18 +1,22 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { registrations: "registrations" }
+  # path to profile/new after sign up
+
+  #NOTE: devise defaults to root_path after sign_up/sign_in
+  # (however you can customise this by editing devise sign_in methods)
+
   resources :profiles
-  devise_for :users
+  # path to subscription after profile/new
 
 
   resources :competitions
-
-
   resources :jobs
-
   resources :posts
 
-root 'posts#index'  
+  # since we never save the database,
+  # we only need these two routes to get a stripe subscription happending
+  resources :subscribers, only: [:new, :create]
 
+  root 'posts#index'
 
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

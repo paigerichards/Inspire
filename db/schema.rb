@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509065202) do
+ActiveRecord::Schema.define(version: 20170510043518) do
 
   create_table "competitions", force: :cascade do |t|
     t.string   "title"
@@ -81,6 +81,8 @@ ActiveRecord::Schema.define(version: 20170509065202) do
     t.datetime "locked_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.boolean  "subscribed"
+    t.string   "stripe_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

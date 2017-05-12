@@ -1,39 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
+<div class="job-show">
+    <h2><%= @job.title %></h2>
+    <em>
+      <% if @job.company.empty? %>
+      <%= @job.user %>
+    <% else %>
+      <%= @job.company %>
+    <%end%>
+  </em>
+    <h3>Description:</h3>
+    <p><%= @job.description %></p>
+    <strong><%= @job.experience_level %></strong>
+    <em><%= @job.date %></em>
 
-<p>
-  <strong>Company:</strong>
-  <%= @job.company %>
-</p>
+  <div class="links">
+    <% if user_signed_in? %>
+      <% if @job.user == current_user%>
+        <%= link_to 'Edit', edit_job_path(job) %>
+        <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%else%>
+        <% link_to 'Back', jobs_path%>
+      <%end%>
+    <%end%>
 
-<p>
-  <strong>Description:</strong>
-  <%= @job.description %>
-</p>
-
-<p>
-  <strong>Experience level:</strong>
-  <%= @job.experience_level %>
-</p>
-
-<p>
-  <strong>User:</strong>
-    <%= @job.user && @job.user.email %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @job.date %>
-</p>
-
-<%if @post.user.id == current_user.id%>
-        <%= link_to "Cancel", posts_path %>
-
-        <%= link_to "Edit Post", edit_post_path(@post)%>
-    <%else%>
-        <% link_to "Cancel", posts_path%>
-        <%end%>
+  </div>
+</div>

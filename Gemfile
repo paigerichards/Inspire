@@ -5,9 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'stripe'
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 gem "mini_magick"
 gem 'carrierwave', '~> 1.0'

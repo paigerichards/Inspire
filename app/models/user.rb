@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  attr_accessor :login
 
   has_one :profile
   has_many :posts
@@ -11,15 +12,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :authentication_keys => [:login]
 
-validates :username,
-          :presence => true,
-          :uniqueness => {
-              :case_sensitive => false
-              
-            }
 
 
-            validate :validate_username
+  validates :username, presence: true, uniqueness: { case_sensitive: false }
+  validate :validate_username
 
 
 # ONLY on this second validation still allows a user to choose
