@@ -1,7 +1,10 @@
 # Inspire
 > Ruby on Rails app
-*The Idea:
-  For my project I wanted to build an application that would benefit aspiring writers. I wanted the users to be able to upload an excerpt of a novel they've written, interest other users and have the possibility of income with users buying the full versions. I wanted to expand this further to job opportunities. I decided that I would integrate a jobs section that would allow users to just click 'apply' and their information would be directly sent to the employer. From there the employer can view all the posts they've made, reviewed and liked. I also wanted to make it a bit more fun with a competition section. I firstly restricted these to fields allowing only businesses that sign up being able to make job and competition posts but no novel posts. Later, I agreed with my tutor that this produced limitations within my app and I decided to give each user the ability to create any type of post, with the decision to sign up as a writer, business or critic later scrapped.*
+
+*The Idea:*
+  *For my project I wanted to build an application that would benefit aspiring writers. I wanted the users to be able to upload an excerpt of a novel they've written, interest other users and have the possibility of income with users buying the full versions. I wanted to expand this further to job opportunities. I decided that I would integrate a jobs section that would allow users to just click 'apply' and their information would be directly sent to the employer. From there the employer can view all the posts they've made, reviewed and liked. I also wanted to make it a bit more fun with a competition section. I firstly restricted these to fields allowing only businesses that sign up being able to make job and competition posts but no novel posts. Later, I agreed with my tutor that this produced limitations within my app and I decided to give each user the ability to create any type of post, with the decision to sign up as a writer, business or critic was later scrapped.*
+
+  ----------------------------------------------------------------------------------
 
 # Contents
   - Inspiration
@@ -10,20 +13,24 @@
   - Challenges
   - Finish product
 
+
+  ----------------------------------------------------------------------------------
+
 # Inspiration
 
-*Below I have incorporated some of my inspiration for my app. I explored the fundamentals of the API applications and user interfaces of both Instagram and Facebook.*
+*Below I have incorporated some of my inspiration for my app. I explored the fundamentals of the API applications and user interfaces of both Instagram and Facebook and somewhat of LinkedIn.*
 
+-  ![](images/facebook.jpg)
+-  ![](images/instagram.jpg)
+-  ![](images/linkedin.jpg)
 
-----------------------------------------------------------------------------------
-
-
--  ![](images/inspiration-image-1.jpg)
--  ![](images/inspiration-image-1.jpg)
-
-Instagram has many great features, the app enables the user to search by; location, tags, usernames/actual names, follow users, contact them and tag them in posts, either one the user has made or in a comment. What appeals me to Instagram is its easy user experience, its simplistic and not complicated, quite straightforward.  Facebook is VERY much simpler. Facebook allows the users to become friends which is much like the follow method on Instagram. One thing that really stuck out about Facebook was its ability to have changeable newsfeeds; defaulted and customizable ones by the user.
+Instagram has many great features, the app enables the user to search by; location, tags, usernames/actual names, follow users, contact them and tag them in posts, either one the user has made or in a comment. What appeals me to Instagram is its easy user experience, its simplistic and not complicated, quite straightforward.  Facebook is VERY much simpler. Facebook allows the users to become friends which is much like the follow method on Instagram and connect option n LinkedIn. One thing that really stuck out about Facebook was its ability to have changeable newsfeeds; defaulted and customizable ones by the user.
 
 After looking closely at these two apps, for my app, I'd like the user to be able to search specific for the page. For example if they are on the Job's page, the will only be given results with jobs relating to the title, experience level and location. I also want to implement a follow option, that will then give the user a 'following feed' with the root page displaying all users posts. This follow option will be found on their profile and will be located next to a contact button. Like Facebook, I would like to implement a Top Stories and Most Recent newsfeed filter.
+
+I like how all applications use a simplistic icon navigation system at the bottom of the screen page on mobile. I would like to keep this idea consistent across all screen sizes with possibly having the bottom navigation, stick to the right hand side at approx. 800px+ width.
+
+Having a look at LinkedIn, I really liked the interface of the profile page. I liked the idea of having a round picture with a frame including the person's full name, location, connections and beginning of a bio. I'm thinking of using a similar design.
 
 The user will be able to have...
 - A username, but with the ability to login with email or username
@@ -40,36 +47,26 @@ The user will be able to have...
 - Ability to review and rate a post
 - Ability to report inappropriate comments
 - Ability to see overall rate of a post
+- Biography
 
+I'm more leaning to creating my app with a closely feel of Instagram for the as I feel like the design in place is more inviting than Facebook and Linkedin with its use of color.
 
-
--------------------------------------------------------------------------------------
-
-I took a big liking to the way the web designer had created this site's homepage with the product links easily displayed in a navigation in the center of the page. This way the user wouldn't have to search through a traditional nav bar that typically isn't at such scale or placement.
-
-- ![](images/inspiration-image-2.jpg)
-
--------------------------------------------------------------------------------------
-
-This website used a very strong design seen across all pages and I believe this is an important aspect in designing web pages. This person has also used a grid system effectively. Another great feature was the colour palette used. I think black is great to emphasis your site along with another colour such as how they've used red.
-
-- ![](images/inspiration-image-3.jpg)
-
--------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 
 # Wireframes
 *For the creation of my wireframes, I used Photoshop.*
+*Across all media platforms I wanted to keep my design simple and easy to use.*
+
+>iPhone 6
+Sign Up process
+
+  ![](images/iphone-6/iphone-6Login.jpg)
+>This is the Sign Up page. As you can see its very simple and easy to use. I kept this same structure and design throughout all media platforms. I decided to use an image behind the sign up box with a color fill as I think it adds a nice touch, its inviting and the coffee and boo highlights relaxation. The use of this blue will become a color theme within my app.
 
 
-  ![](images/lowfidelity.jpg)
->Low fidelity:
-This is the design I decided to use for my Portfolio Website. I knew I wanted a black background and some sort of background image for some personality. Over this, text in some areas on my site will have a transparent white box underneath to achieve sufficient legibility.
 
-
-
-  ![](images/highfidelity.jpg)
->High fidelity:
-Progressing from low to high fidelity, I had to figure out what the background image would be. I knew I wanted something that would provide me with a themed color scheme with little amount of colors and would contrast well with black and white. I got thinking and decided I wanted to use a vine. I found an image of a little vine that I duplicated many times and was manipulated into what I desired. From this, I now would be incorporating green as text in places throughout my website. I decided to use two white borders around my content, to really frame the focus of the page. I think this was a nice idea. From these mockups, I knew I wanted a fancy font for my name and a sans-serif for all other type.
+  ![](images/iphone-6/iphone-6Sign UP.jpg)
+>I want the user to click the sign up button and then be brough to this page where they will fill out their personal details 
 
 
 
