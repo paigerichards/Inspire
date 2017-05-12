@@ -57,8 +57,8 @@ I'm more leaning to creating my app with a closely feel of Instagram for the as 
 *For the creation of my wireframes, I used Photoshop.*
 *Across all media platforms I wanted to keep my design simple and easy to use.*
 
->iPhone 6
-Sign Up process
+iPhone 6
+>Sign Up process
 
   ![](images/iphone-6/iphone-6Login.jpg)
 >This is the Sign Up page. As you can see its very simple and easy to use. I kept this same structure and design throughout all media platforms. I decided to use an image behind the sign up box with a color fill as I think it adds a nice touch, its inviting and the coffee and boo highlights relaxation. The use of this blue will become a color theme within my app.
@@ -66,7 +66,40 @@ Sign Up process
 
 
   ![](images/iphone-6/iphone-6Sign UP.jpg)
->I want the user to click the sign up button and then be brough to this page where they will fill out their personal details
+>I want the user to click the sign up button and then be brought to this page where they will fill out their personal details and chose a password. The will have the option to continue or cancel. Again I have used a background image with a colour fill, this time purple.
+
+  ![](images/iphone-6/iphone-6Sign Up Page 2.jpg)
+>This is the second process of the sign up, you will chose a username, chose what you are and upload a profile picture. You will again have the option to continue or cancel. I kept the same image and colour fill as they are related pages.
+
+  ![](images/iphone-6/iphone-6Sign up - Payment.jpg)
+>This is the third and final process of the sign up, this is where you will create your monthly subscription. You will again have the option to continue or cancel. I kept the same image and colour fill as they are related pages.
+
+![](images/iphone-6/iphone-6Success Sign Up.jpg)
+>Once sign up is successfully the user will be sent to this page. I have decided to use a different image at this stage and a red colour fill.
+
+
+> Newsfeeds
+
+  ![](images/iphone-6/iphone-6Newsfeed.jpg)
+>This is the post feed. This will be the root page of my site. To keep color consistency I have used the same blue at the login page to theme this page. As you can see, I have show what the navigation will look like for changing to top stories or most recent and what kind of newsfeed is displayed.
+
+  ![](images/iphone-6/iphone-6Following.jpg)
+>Again keeping within the colors I have chosen, the Following feed will be themed purple. As you can see the highlighted area (if your a business) has given you the option to post a job or competition (after clicking the + sign in the middle of the bottom nav). This is still a functional feature, however the decision to all users to create all types of posts has been made. Edit seen in wireframes made below.
+
+  ![](images/iphone-6/iphone-6Post Job.jpg)
+>For Jobs, I used a color theme that would go nicely with both the purple and blue chosen for previous pages. As you can see I have created the posts in two columns, I later realized this will become an issue for readability on such mobile as the iPhone six. Changes where later made to have one post across full page, the columns will be seen on desktop and iPad retina.
+
+  ![](images/iphone-6/iphone-6Compettions.jpg)
+> The colour scheme for competitions is the same of that of the congratulations page. Again like jobs, the two column split for mobile of this size will be edited.
+
+>Creating Posts
+I have kept the colour scheme of newsfeeds related to the creation of post.
+
+  ![](images/iphone-6/iphone-6Create Post.jpg)
+> This wireframe is of the process to create a general post of a novel the user has created.
+
+
+
 
 
 
@@ -74,23 +107,10 @@ Sign Up process
 
 
 Mockup:
-![](images/mockup.jpg)
-This was a mockup I created to get a real feel for my design and how it would be represented on mobile screen.
+
 
 # Changes / Improvements
 
-*I began to code by this stage and had most of the technical elements and style coded. I kept coming back to my design and I figured I needed more information about myself and a couple more pages to really show off my skills and desire to be a web developer. This then led me to the creation of the pages; skills and contact. I then furthered changes to design of the links to pages; instead of having them displayed as an inline-block, I wanted them as blocks.*
+
 
 # Challenges
-*My first idea for the vines was to make them grow around the page when loaded. I searched online for a while on how to do this and I found a step by step guide using Javascript. I decided not to go ahead with it, as I understood very little of the technicality being implemented. I plan in the future to update my site and do this once I've learnt Javascript in a bit more depth.
-I faced issues with a type face 'CAC Champagne', that I so desperately wanted to use but would not render in its proper form on IOS. This then led me to use the google font 'Italianno' for my h1.*
-
-# Code & Validation
-*For SEO purposes and for personal preference, I wanted to validate my code. I went through and validated all my HTML and CSS pages and made changes until I received this message*
-![](images/validate.jpg)
-As you can see above, each page has been successfully passed with no errors.
-
-# Finished Product
-*After redesigning and coding I'm finally at the stage of a finished product.*
-![](images/Frontview.jpg)
-I'm pleased with the outcome of my portfolio website, it reflects my objectives I originally wanted; simple yet appealing and informative.
