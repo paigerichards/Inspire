@@ -23,3 +23,5 @@ test:
 production:
   <<: *default
   database: production
+  username: paige.richards14@hotmail.co.uk
+  password: ENV['DB_PASSWORD']
