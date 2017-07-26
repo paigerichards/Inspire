@@ -8,7 +8,6 @@
 
 # Contents
   - Inspiration
-  - Timeline
   - Wireframes
   - Production Plan
   - Changes
@@ -53,11 +52,6 @@ The user will be able to have...
 - Biography
 
 I'm more leaning to creating my app with a closely feel of Instagram for the as I feel like the design in place is more inviting than Facebook and Linkedin with its use of color.
-
-------------------------------------------------------------------------------------
-#Timeline
-
-insert image
 
 ------------------------------------------------------------------------------------
 # Wireframes
@@ -179,7 +173,7 @@ All though having never used bootstrap I hope to be able to use this effeciently
 NOTE this change is yet to be implemented.
 I have alos decided to change the star icon to a heart as it could cause confusion in relation to the rating system I will be implementing.
 
-#Chalenges
+#Challenges
 - Devise.
 For my application I was adamant to have the user to have a functional username that will display on posts and will allow the user to sign in accordingly.
 I had many issues with this, which caused most of my time delay in creating most of the basic shell of my app. The user would appear in the console when called, however on the server I would have an error that would display that the user 'did not exist'. This was the product of many faults within my code, however going through this with my tutor made it clear where I had gone. The error then appeared again when I tried to link the profile set-up page from the sign_up_path. However was quickly resolved by eliminating typos. *Issue Solved*
@@ -197,7 +191,7 @@ Within my Post scaffold, I seemingly forgot to add the genre feild. I tried to f
 ------------------------------------------------------------------------------------
 
 # Product Link
-
+https://inspire3.herokuapp.com/
 ------------------------------------------------------------------------------------
 
 #Overview and Improvements for next time
