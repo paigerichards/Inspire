@@ -7,12 +7,12 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
   @posts = Post.all
-  if params[:search]
-    @posts = Post.search(params[:search]).order(created_at: :desc)
-  else
-    @posts = Post.all.order(created_at: :desc)
+    if params[:search]
+      @posts = Post.search(params[:search]).order(created_at: :desc)
+    else
+      @posts = Post.all.order(created_at: :desc)
+    end
   end
-end
 
   # GET /posts/1
   # GET /posts/1.json
@@ -91,5 +91,4 @@ end
         redirect_to root_path
       end
     end
-
 end
