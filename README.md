@@ -190,7 +190,7 @@ Within my Post scaffold, I seemingly forgot to add the genre feild. I tried to f
 
 ------------------------------------------------------------------------------------
 
-# Product Link
+### Product Link
 https://inspire3.herokuapp.com/
 ------------------------------------------------------------------------------------
 
